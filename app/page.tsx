@@ -5,7 +5,7 @@ export default function Home() {
     <main className="min-h-screen">
       <section className="mx-auto flex min-h-[calc(100vh-4.5rem)] max-w-5xl flex-col justify-center gap-12 px-6 py-16 sm:px-10 lg:flex-row lg:items-center lg:gap-16">
         <div className="flex-1">
-          <p className="text-sm font-medium tracking-wide text-foreground/60">
+          <p className="text-sm font-medium tracking-wide text-accent">
             Rishitha Wickramasinghe
           </p>
           <h1 className="mt-4 max-w-3xl text-4xl font-semibold tracking-tight sm:text-6xl">
@@ -19,19 +19,19 @@ export default function Home() {
             developer, or full-stack internship opportunities.
           </p>
           <a
-            className="mt-10 inline-block w-fit border-b border-foreground pb-1 text-base font-medium transition hover:opacity-70"
+            className="mt-10 inline-block w-fit border-b border-accent pb-1 text-base font-medium transition-colors hover:text-accent"
             href="mailto:hello@example.com"
           >
             Email
           </a>
         </div>
 
-        <figure className="w-full max-w-sm shrink-0 overflow-hidden border border-foreground/15 bg-foreground/3 shadow-sm lg:max-w-xs">
+        <figure className="w-full max-w-sm shrink-0 overflow-hidden border border-foreground/15 bg-foreground/3 shadow-2xl shadow-black/30 lg:max-w-xs">
           <Image
-            src="/profile.png"
+            src="/Profile.png"
             alt="Portrait of Rishitha Wickramasinghe"
-            width={640}
-            height={800}
+            width={1024}
+            height={1024}
             className="aspect-4/5 h-auto w-full object-cover"
             priority
           />
