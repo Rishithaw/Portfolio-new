@@ -1,5 +1,18 @@
 import Image from "next/image";
 
+const education = [
+  {
+    title: "Degree or Diploma",
+    institution: "Institution name",
+    period: "Start year — Graduation year",
+  },
+  {
+    title: "Program or Certification",
+    institution: "Institution name",
+    period: "Year completed",
+  },
+] as const;
+
 export default function Home() {
   return (
     <main className="min-h-screen">
@@ -39,6 +52,40 @@ export default function Home() {
             Rishitha Wickramasinghe
           </figcaption>
         </figure>
+      </section>
+
+      <section
+        aria-labelledby="education-heading"
+        className="border-t border-foreground/10"
+      >
+        <div className="mx-auto max-w-5xl px-6 py-20 sm:px-10 sm:py-24">
+          <p className="text-sm font-medium tracking-wide text-accent">
+            Background
+          </p>
+          <h2
+            id="education-heading"
+            className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl"
+          >
+            Education
+          </h2>
+
+          <div className="mt-10 grid gap-5 md:grid-cols-3">
+            {education.map((item) => (
+              <article
+                key={item.title}
+                className="border border-foreground/15 bg-foreground/3 p-6 transition-colors hover:border-accent/60"
+              >
+                <p className="text-sm text-foreground/50">{item.period}</p>
+                <h3 className="mt-4 text-xl font-semibold tracking-tight">
+                  {item.title}
+                </h3>
+                <p className="mt-2 leading-7 text-foreground/70">
+                  {item.institution}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
       </section>
     </main>
   );
