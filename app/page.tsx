@@ -5,16 +5,22 @@ const education = [
     title: "Diploma",
     institution: "Red River College",
     period: "Jan 2025 — April 2026",
+    image: "/education/rrc.png",
+    link: "https://www.rrc.ca",
   },
   {
     title: "Graduate Diploma in Software Engineering",
     institution: "Institute Of Software Engineering",
     period: "February 2024 — December 2024",
+    image: "/education/ijse.png",
+    link: "https://www.ijse.lk",
   },
   {
     title: "Certified Master Java Developer",
     institution: "Institute Of Software Engineering",
     period: "August 2024 — April 2025",
+    image: "/education/ijse.png",
+    link: "https://www.ijse.lk",
   },
 ] as const;
 
@@ -78,15 +84,32 @@ export default function Home() {
             {education.map((item) => (
               <article
                 key={item.title}
-                className="border border-foreground/15 bg-foreground/3 p-6 transition-colors hover:border-accent/60"
+                className="flex flex-col overflow-hidden border border-foreground/15 bg-foreground/3 transition-colors hover:border-accent/60"
               >
-                <p className="text-sm text-foreground/50">{item.period}</p>
-                <h3 className="mt-4 text-xl font-semibold tracking-tight">
-                  {item.title}
-                </h3>
-                <p className="mt-2 leading-7 text-foreground/70">
-                  {item.institution}
-                </p>
+                <Image
+                  src={item.image}
+                  alt={`${item.institution} — ${item.title}`}
+                  width={800}
+                  height={450}
+                  className="aspect-video h-auto w-full border-b border-foreground/10 object-cover"
+                />
+                <div className="flex flex-1 flex-col p-6">
+                  <p className="text-sm text-foreground/50">{item.period}</p>
+                  <h3 className="mt-4 text-xl font-semibold tracking-tight">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 mb-6 leading-7 text-foreground/70">
+                    {item.institution}
+                  </p>
+                  <a
+                    className="mt-auto inline-block w-fit border-b border-accent pb-1 text-sm font-medium transition-colors hover:text-accent"
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Visit website
+                  </a>
+                </div>
               </article>
             ))}
           </div>
