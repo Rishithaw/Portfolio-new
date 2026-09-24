@@ -1,11 +1,5 @@
 import Link from "next/link";
-
-const links = [
-  { href: "/", label: "Home" },
-  { href: "/skills", label: "Skills" },
-  { href: "/projects", label: "Projects" },
-  { href: "/contact", label: "Contact" },
-] as const;
+import { navLinks as links } from "@/components/navLinks";
 
 export default function Navbar() {
   return (
