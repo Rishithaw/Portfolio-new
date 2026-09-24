@@ -2,14 +2,19 @@ import Image from "next/image";
 
 const education = [
   {
-    title: "Degree or Diploma",
-    institution: "Institution name",
-    period: "Start year — Graduation year",
+    title: "Diploma",
+    institution: "Red River College",
+    period: "Jan 2025 — April 2026",
   },
   {
-    title: "Program or Certification",
-    institution: "Institution name",
-    period: "Year completed",
+    title: "Graduate Diploma in Software Engineering",
+    institution: "Institute Of Software Engineering",
+    period: "February 2024 — December 2024",
+  },
+  {
+    title: "Certified Master Java Developer",
+    institution: "Institute Of Software Engineering",
+    period: "August 2024 — April 2025",
   },
 ] as const;
 
