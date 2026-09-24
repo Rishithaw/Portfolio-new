@@ -1,3 +1,6 @@
+import { SiDiagramsdotnet, SiDocker, SiFigma } from "react-icons/si";
+import { VscVscode } from "react-icons/vsc";
+
 const skills = [
   {
     title: "Custom Java Applications",
@@ -19,6 +22,13 @@ const skills = [
     description:
       "Design and implement REST API routes for data-driven applications, including authentication and third-party integrations.",
   },
+] as const;
+
+const tools = [
+  { name: "VS Code", Icon: VscVscode },
+  { name: "Draw.io", Icon: SiDiagramsdotnet },
+  { name: "Figma", Icon: SiFigma },
+  { name: "Docker", Icon: SiDocker },
 ] as const;
 
 export default function Skills() {
@@ -47,6 +57,38 @@ export default function Skills() {
               </p>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section
+        aria-labelledby="tools-heading"
+        className="border-t border-foreground/10"
+      >
+        <div className="mx-auto max-w-5xl px-6 py-16 sm:px-10 sm:py-20">
+          <p className="text-sm font-medium tracking-wide text-accent">
+            Workflow
+          </p>
+          <h2
+            id="tools-heading"
+            className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl"
+          >
+            Tools Used
+          </h2>
+
+          <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {tools.map((tool) => (
+              <li
+                key={tool.name}
+                className="flex items-center gap-4 border border-foreground/15 bg-foreground/3 px-6 py-5 text-lg font-medium transition-colors hover:border-accent/60"
+              >
+                <tool.Icon
+                  aria-hidden="true"
+                  className="size-7 shrink-0 text-accent"
+                />
+                {tool.name}
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
     </main>
