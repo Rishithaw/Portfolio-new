@@ -1,7 +1,37 @@
-const projects = Array.from({ length: 6 }, (_, index) => ({
-  title: `Project ${String(index + 1).padStart(2, "0")}`,
-  description: "Project details.",
-}));
+import Image from "next/image";
+
+const projects = [
+  {
+    title: "BetterDrive",
+    description: "A driving school management system built to organize students, vehicles, and daily operations in one structured workflow.",
+    image: "/projects/driving.jpg",
+  },
+  {
+    title: "Movie Catalog Site",
+    description: "A movie search web app focused on clean result browsing, responsive layout behavior, and JavaScript interactions.",
+    image: "/projects/movie.jpg",
+  },
+  {
+    title: "My Portfolio",
+    description: "A responsive portfolio website for presenting my strongest projects, technical skills, and contact information to hiring teams.",
+    image: "/projects/portfolio.png",
+  },
+  {
+    title: "Blog Site",
+    description: "A web application for managing blog-style content and practicing full web page structure.",
+    image: "/projects/blog.png",
+  },
+  {
+    title: "Tic-Tac-Toe",
+    description: "A game where the player competes against a program using the Minimax algorithm for decisions.",
+    image: "/projects/tictactoe.jpg",
+  },
+  {
+    title: "Terminal Program",
+    description: "A Java inventory tool with login authentication and terminal-based stock management workflows.",
+    image: "/projects/terminal.jpeg",
+  },
+] as const;
 
 export default function Projects() {
   return (
@@ -19,17 +49,26 @@ export default function Projects() {
           {projects.map((project) => (
             <article
               key={project.title}
-              className="flex min-h-56 flex-col border border-foreground/15 bg-foreground/3 p-6 transition-colors hover:border-accent/60"
+              className="flex min-h-56 flex-col overflow-hidden border border-foreground/15 bg-foreground/3 transition-colors hover:border-accent/60"
             >
-              <p className="text-sm font-medium tracking-wide text-accent">
-                Featured work
-              </p>
-              <h2 className="mt-4 text-xl font-semibold tracking-tight">
-                {project.title}
-              </h2>
-              <p className="mt-4 leading-7 text-foreground/70">
-                {project.description}
-              </p>
+              <Image
+                src={project.image}
+                alt={`${project.title} project preview`}
+                width={800}
+                height={450}
+                className="aspect-video h-auto w-full border-b border-foreground/10 object-cover"
+              />
+              <div className="flex flex-1 flex-col p-6">
+                <p className="text-sm font-medium tracking-wide text-accent">
+                  Featured work
+                </p>
+                <h2 className="mt-4 text-xl font-semibold tracking-tight">
+                  {project.title}
+                </h2>
+                <p className="mt-4 leading-7 text-foreground/70">
+                  {project.description}
+                </p>
+              </div>
             </article>
           ))}
         </div>
