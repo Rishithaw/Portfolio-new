@@ -1,4 +1,17 @@
-import { SiDiagramsdotnet, SiDocker, SiFigma } from "react-icons/si";
+import { FaJava } from "react-icons/fa";
+import {
+  SiCss,
+  SiDiagramsdotnet,
+  SiDocker,
+  SiFigma,
+  SiHtml5,
+  SiJavascript,
+  SiMysql,
+  SiNextdotjs,
+  SiPostgresql,
+  SiPython,
+  SiReact,
+} from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 
 const skills = [
@@ -29,6 +42,18 @@ const tools = [
   { name: "Draw.io", Icon: SiDiagramsdotnet },
   { name: "Figma", Icon: SiFigma },
   { name: "Docker", Icon: SiDocker },
+] as const;
+
+const technologies = [
+  { name: "Java", Icon: FaJava },
+  { name: "MySQL", Icon: SiMysql },
+  { name: "HTML", Icon: SiHtml5 },
+  { name: "CSS", Icon: SiCss },
+  { name: "JavaScript", Icon: SiJavascript },
+  { name: "PostgreSQL", Icon: SiPostgresql },
+  { name: "Python", Icon: SiPython },
+  { name: "React", Icon: SiReact },
+  { name: "Next.js", Icon: SiNextdotjs },
 ] as const;
 
 export default function Skills() {
@@ -86,6 +111,38 @@ export default function Skills() {
                   className="size-7 shrink-0 text-accent"
                 />
                 {tool.name}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section
+        aria-labelledby="tech-stack-heading"
+        className="border-t border-foreground/10"
+      >
+        <div className="mx-auto max-w-5xl px-6 py-16 sm:px-10 sm:py-20">
+          <p className="text-sm font-medium tracking-wide text-accent">
+            Technologies
+          </p>
+          <h2
+            id="tech-stack-heading"
+            className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl"
+          >
+            Tech Stack
+          </h2>
+
+          <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {technologies.map((technology) => (
+              <li
+                key={technology.name}
+                className="flex items-center gap-4 border border-foreground/15 bg-foreground/3 px-6 py-5 text-lg font-medium transition-colors hover:border-accent/60"
+              >
+                <technology.Icon
+                  aria-hidden="true"
+                  className="size-7 shrink-0 text-accent"
+                />
+                {technology.name}
               </li>
             ))}
           </ul>
