@@ -30,6 +30,7 @@ export default function Contact() {
                 name="name"
                 type="text"
                 autoComplete="name"
+                placeholder="Your name"
                 className="w-full border border-foreground/20 bg-background px-4 py-3 text-foreground outline-none transition-colors focus:border-accent"
               />
             </div>
@@ -46,6 +47,7 @@ export default function Contact() {
                 name="email"
                 type="email"
                 autoComplete="email"
+                placeholder="you@example.com"
                 className="w-full border border-foreground/20 bg-background px-4 py-3 text-foreground outline-none transition-colors focus:border-accent"
               />
             </div>
@@ -62,6 +64,7 @@ export default function Contact() {
                 name="contactNumber"
                 type="tel"
                 autoComplete="tel"
+                placeholder="(204) 555-0123"
                 className="w-full border border-foreground/20 bg-background px-4 py-3 text-foreground outline-none transition-colors focus:border-accent"
               />
             </div>
@@ -77,6 +80,7 @@ export default function Contact() {
                 id="comments"
                 name="comments"
                 rows={6}
+                placeholder="How can I help?"
                 className="w-full resize-y border border-foreground/20 bg-background px-4 py-3 text-foreground outline-none transition-colors focus:border-accent"
               />
             </div>
