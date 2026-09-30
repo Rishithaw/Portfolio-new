@@ -15,6 +15,11 @@ export default function Contact() {
         >
           Email
         </a>
+
+        <div
+          aria-hidden="true"
+          className="mt-12 min-h-96 border border-foreground/15 bg-foreground/3"
+        />
       </section>
     </main>
   );
