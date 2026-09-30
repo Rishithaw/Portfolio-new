@@ -42,7 +42,7 @@ const projects = [
 export default function Projects() {
   return (
     <main className="min-h-screen">
-      <section className="mx-auto max-w-5xl px-6 py-16 sm:px-10 sm:py-20">
+      <section className="motion-fade-up mx-auto max-w-5xl px-6 py-16 sm:px-10 sm:py-20">
         <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
           Projects
         </h1>
@@ -55,14 +55,14 @@ export default function Projects() {
           {projects.map((project) => (
             <article
               key={project.title}
-              className="flex min-h-56 flex-col overflow-hidden border border-foreground/15 bg-foreground/3 transition-colors hover:border-accent/60"
+              className="group motion-lift flex min-h-56 flex-col overflow-hidden border border-foreground/15 bg-foreground/3 hover:border-accent/60"
             >
               <Image
                 src={project.image}
                 alt={`${project.title} project preview`}
                 width={800}
                 height={450}
-                className="aspect-video h-auto w-full border-b border-foreground/10 object-cover"
+                className="motion-image aspect-video h-auto w-full border-b border-foreground/10 object-cover"
               />
               <div className="flex flex-1 flex-col p-6">
                 <p className="text-sm font-medium tracking-wide text-accent">

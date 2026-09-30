@@ -29,7 +29,7 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <section className="relative mx-auto flex min-h-[calc(100vh-4.5rem)] max-w-5xl flex-col justify-center gap-12 px-6 py-16 sm:px-10 lg:flex-row lg:items-center lg:gap-16">
-        <div className="relative z-10 flex-1">
+        <div className="motion-fade-up relative z-10 flex-1">
           <p className="text-sm font-medium tracking-wide text-accent">
             Rishitha Wickramasinghe
           </p>
@@ -60,7 +60,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="relative z-10 w-full max-w-sm shrink-0 lg:max-w-xs">
+        <div className="motion-fade-in motion-delay-1 relative z-10 w-full max-w-sm shrink-0 lg:max-w-xs">
           <div
             aria-hidden="true"
             className="pointer-events-none absolute inset-1 bg-accent/20 blur-2xl"
@@ -100,14 +100,14 @@ export default function Home() {
             {education.map((item) => (
               <article
                 key={item.title}
-                className="flex flex-col overflow-hidden border border-foreground/15 bg-foreground/3 transition-colors hover:border-accent/60"
+                className="group motion-lift flex flex-col overflow-hidden border border-foreground/15 bg-foreground/3 hover:border-accent/60"
               >
                 <Image
                   src={item.image}
                   alt={`${item.institution} — ${item.title}`}
                   width={800}
                   height={450}
-                  className="aspect-video h-auto w-full border-b border-foreground/10 object-cover"
+                  className="motion-image aspect-video h-auto w-full border-b border-foreground/10 object-cover"
                 />
                 <div className="flex flex-1 flex-col p-6">
                   <p className="text-sm text-foreground/50">{item.period}</p>

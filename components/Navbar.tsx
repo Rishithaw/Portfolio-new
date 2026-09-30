@@ -75,7 +75,7 @@ export default function Navbar() {
         <nav
           id="mobile-navigation"
           aria-label="Mobile navigation"
-          className="border-t border-foreground/10 px-6 py-4 sm:hidden"
+          className="motion-fade-up border-t border-foreground/10 px-6 py-4 sm:hidden"
         >
           <ul className="mx-auto flex max-w-5xl flex-col">
             {links.map((link) => (

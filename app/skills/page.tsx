@@ -59,7 +59,7 @@ const technologies = [
 export default function Skills() {
   return (
     <main className="min-h-screen">
-      <section className="mx-auto max-w-5xl px-6 py-16 sm:px-10 sm:py-20">
+      <section className="motion-fade-up mx-auto max-w-5xl px-6 py-16 sm:px-10 sm:py-20">
         <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
           Skills
         </h1>
@@ -72,7 +72,7 @@ export default function Skills() {
           {skills.map((skill) => (
             <article
               key={skill.title}
-              className="border border-foreground/15 bg-foreground/3 p-6 transition-colors hover:border-accent/60 sm:p-8"
+              className="motion-lift border border-foreground/15 bg-foreground/3 p-6 hover:border-accent/60 sm:p-8"
             >
               <h2 className="text-xl font-semibold tracking-tight">
                 {skill.title}
@@ -104,11 +104,11 @@ export default function Skills() {
             {tools.map((tool) => (
               <li
                 key={tool.name}
-                className="flex items-center gap-4 border border-foreground/15 bg-foreground/3 px-6 py-5 text-lg font-medium transition-colors hover:border-accent/60"
+                className="group motion-lift flex items-center gap-4 border border-foreground/15 bg-foreground/3 px-6 py-5 text-lg font-medium hover:border-accent/60"
               >
                 <tool.Icon
                   aria-hidden="true"
-                  className="size-7 shrink-0 text-accent"
+                  className="motion-image size-7 shrink-0 text-accent"
                 />
                 {tool.name}
               </li>
@@ -136,11 +136,11 @@ export default function Skills() {
             {technologies.map((technology) => (
               <li
                 key={technology.name}
-                className="flex items-center gap-4 border border-foreground/15 bg-foreground/3 px-6 py-5 text-lg font-medium transition-colors hover:border-accent/60"
+                className="group motion-lift flex items-center gap-4 border border-foreground/15 bg-foreground/3 px-6 py-5 text-lg font-medium hover:border-accent/60"
               >
                 <technology.Icon
                   aria-hidden="true"
-                  className="size-7 shrink-0 text-accent"
+                  className="motion-image size-7 shrink-0 text-accent"
                 />
                 {technology.name}
               </li>

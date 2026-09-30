@@ -25,3 +25,77 @@ body {
   color: var(--foreground);
   font-family: var(--font-geist-sans), system-ui, sans-serif;
 }
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.motion-fade-up {
+  animation: fade-up 600ms ease-out both;
+}
+
+.motion-fade-in {
+  animation: fade-in 700ms ease-out both;
+}
+
+.motion-delay-1 {
+  animation-delay: 120ms;
+}
+
+.motion-delay-2 {
+  animation-delay: 240ms;
+}
+
+.motion-lift {
+  transition:
+    transform 250ms ease,
+    border-color 250ms ease,
+    box-shadow 250ms ease;
+}
+
+.motion-lift:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: 0 1rem 2.5rem rgb(0 0 0 / 20%);
+}
+
+.motion-image {
+  transition: transform 500ms ease;
+}
+
+.group:hover .motion-image {
+  transform: scale(1.04);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .motion-lift:hover,
+  .group:hover .motion-image {
+    transform: none;
+  }
+}

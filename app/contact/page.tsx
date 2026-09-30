@@ -1,7 +1,7 @@
 export default function Contact() {
   return (
     <main className="min-h-screen">
-      <section className="mx-auto max-w-5xl px-6 py-16 sm:px-10">
+      <section className="motion-fade-up mx-auto max-w-5xl px-6 py-16 sm:px-10">
         <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
           Contact
         </h1>
