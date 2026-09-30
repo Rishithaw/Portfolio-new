@@ -85,6 +85,21 @@ export default function Contact() {
               />
             </div>
           </div>
+
+          <div className="mt-8 flex flex-wrap gap-4">
+            <button
+              type="submit"
+              className="bg-accent px-6 py-3 text-sm font-medium text-foreground transition-opacity hover:opacity-85"
+            >
+              Submit
+            </button>
+            <button
+              type="reset"
+              className="border border-foreground/20 px-6 py-3 text-sm font-medium transition-colors hover:border-foreground/50"
+            >
+              Reset
+            </button>
+          </div>
         </form>
       </section>
     </main>
