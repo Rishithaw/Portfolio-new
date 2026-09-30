@@ -16,10 +16,72 @@ export default function Contact() {
           Email
         </a>
 
-        <div
-          aria-hidden="true"
-          className="mt-12 min-h-96 border border-foreground/15 bg-foreground/3"
-        />
+        <form className="mt-12 border border-foreground/15 bg-foreground/3 p-6 sm:p-8">
+          <div className="grid gap-6 sm:grid-cols-2">
+            <div>
+              <label
+                htmlFor="name"
+                className="mb-2 block text-sm font-medium"
+              >
+                Name
+              </label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                autoComplete="name"
+                className="w-full border border-foreground/20 bg-background px-4 py-3 text-foreground outline-none transition-colors focus:border-accent"
+              />
+            </div>
+
+            <div>
+              <label
+                htmlFor="email"
+                className="mb-2 block text-sm font-medium"
+              >
+                Email
+              </label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autoComplete="email"
+                className="w-full border border-foreground/20 bg-background px-4 py-3 text-foreground outline-none transition-colors focus:border-accent"
+              />
+            </div>
+
+            <div className="sm:col-span-2">
+              <label
+                htmlFor="contact-number"
+                className="mb-2 block text-sm font-medium"
+              >
+                Contact Number
+              </label>
+              <input
+                id="contact-number"
+                name="contactNumber"
+                type="tel"
+                autoComplete="tel"
+                className="w-full border border-foreground/20 bg-background px-4 py-3 text-foreground outline-none transition-colors focus:border-accent"
+              />
+            </div>
+
+            <div className="sm:col-span-2">
+              <label
+                htmlFor="comments"
+                className="mb-2 block text-sm font-medium"
+              >
+                Comments
+              </label>
+              <textarea
+                id="comments"
+                name="comments"
+                rows={6}
+                className="w-full resize-y border border-foreground/20 bg-background px-4 py-3 text-foreground outline-none transition-colors focus:border-accent"
+              />
+            </div>
+          </div>
+        </form>
       </section>
     </main>
   );
