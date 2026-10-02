@@ -6,36 +6,42 @@ const projects = [
     description: "A driving school management system built to organize students, vehicles, and daily operations in one structured workflow.",
     image: "/projects/driving.jpg",
     sourceUrl: "https://github.com/Rishithaw/Driving_School",
+    technologies: ["Java", "JavaFX", "MySQL"],
   },
   {
     title: "Movie Catalog Site",
     description: "A movie search web app focused on clean result browsing, responsive layout behavior, and JavaScript interactions.",
     image: "/projects/movie.jpg",
     sourceUrl: "https://github.com/Rishithaw/Movies",
+    technologies: [],
   },
   {
     title: "My Portfolio",
     description: "A responsive portfolio website for presenting my strongest projects, technical skills, and contact information to hiring teams.",
     image: "/projects/portfolio.png",
     sourceUrl: "https://github.com/Rishithaw/Portfolio",
+    technologies: [],
   },
   {
     title: "Blog Site",
     description: "A web application for managing blog-style content and practicing full web page structure.",
     image: "/projects/blog.png",
     sourceUrl: "https://github.com/Rishithaw/Final-Project-Web-Dev",
+    technologies: [],
   },
   {
     title: "Tic-Tac-Toe",
     description: "A game where the player competes against a program using the Minimax algorithm for decisions.",
     image: "/projects/tictactoe.jpg",
     sourceUrl: "https://github.com/Rishithaw/Tic-Tac-Toe",
+    technologies: [],
   },
   {
     title: "Terminal Program",
     description: "A Java inventory tool with login authentication and terminal-based stock management workflows.",
     image: "/projects/terminal.jpeg",
     sourceUrl: "https://github.com/Rishithaw/Stock-Management",
+    technologies: [],
   },
 ] as const;
 
@@ -74,6 +80,21 @@ export default function Projects() {
                 <p className="mt-4 leading-7 text-foreground/70">
                   {project.description}
                 </p>
+                {project.technologies.length > 0 && (
+                  <ul
+                    className="mt-5 mb-6 flex flex-wrap gap-2"
+                    aria-label={`${project.title} technologies`}
+                  >
+                    {project.technologies.map((technology) => (
+                      <li
+                        key={technology}
+                        className="border border-foreground/15 bg-foreground/5 px-3 py-1 text-xs font-medium text-foreground/75"
+                      >
+                        {technology}
+                      </li>
+                    ))}
+                  </ul>
+                )}
                 <a
                   href={project.sourceUrl}
                   target="_blank"
